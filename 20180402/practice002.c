@@ -11,15 +11,21 @@
 #include <stdio.h>
 int main()
 {
-int revenue;
-float bonus;
-printf("The revenue is:");
-scanf("%d",&revenue);
-if(revenue<=10)bonus=0.1*revenue;
-	else if(10<revenue<=20)bonus=0.1*10+0.075*(revenue-10);
-	else if(20<revenue<=40)bonus=0.1*10+0.075*(20-10)+0.05*(revenue-20);
-	else if(40<revenue<=60)bonus=0.1*10+0.075*(20-10)+0.05*(40-20)+0.03*(revenue-40);
-	else if(60<revenue<=100)bonus=0.1*10+0.075*(20-10)+0.05*(40-20)+0.03*(60-40)+0.015*(revenue-60);
-	else bonus=0.1*10+0.075*(20-10)+0.05*(40-20)+0.03*(60-40)+0.015*(100-60)+0.01*(revenue-100);
-printf("The bonus is:%5.3f",bonus);
+	int revenue;
+	float bonus;
+	printf("The revenue is:");
+	scanf("%d",&revenue);
+	if(revenue<=10)
+		bonus=0.1*revenue;
+	else if(revenue<=20)
+		bonus=0.1*10+0.075*(revenue-10);
+	else if(revenue<=40)
+		bonus=0.1*10+0.075*(20-10)+0.05*(revenue-20);
+	else if(revenue<=60)
+		bonus=0.1*10+0.075*(20-10)+0.05*(40-20)+0.03*(revenue-40);
+	else if(revenue<=100)
+		bonus=0.1*10+0.075*(20-10)+0.05*(40-20)+0.03*(60-40)+0.015*(revenue-60);
+	else 
+		bonus=0.1*10+0.075*(20-10)+0.05*(40-20)+0.03*(60-40)+0.015*(100-60)+0.01*(revenue-100);
+	printf("The bonus is:%5.3f",bonus);
 }
