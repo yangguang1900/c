@@ -3,17 +3,13 @@
 int main()
 {
 	int a,m,n;
-	int flag=0;
-	for(m=10;m<=168;m++)
+	for(m=-100;m<=168;m++)
 	{
 		for(n=m+1;n<168;n++)
 			if((n-m)*(n+m)==168)
 			{
-				flag=1;
 				a=m*m-100;
-				printf("%d,%d,%d",a,m,n);
-				break;
+				printf("%d,%d,%d\n",a,m,n);
 			}
-		if(flag==1)break;
 	}
 }
